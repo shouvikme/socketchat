@@ -1,0 +1,27 @@
+{
+  "name": "socketchat",
+  "version": "1.0.0",
+  "description": "A simple SocketIO based Chat Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shouvikme/socketchat.git"
+  },
+  "author": "Shouvik S Mazumdar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shouvikme/socketchat/issues"
+  },
+  "homepage": "https://github.com/shouvikme/socketchat#readme",
+  "dependencies": {
+    "ecstatic": "^4.1.4",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "socket-io": "^1.0.0",
+    "socket.io": "^4.3.1",
+    "socket.io-p2p-server": "^1.2.0"
+  }
+}
