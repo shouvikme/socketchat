@@ -4,7 +4,9 @@
   "description": "A simple SocketIO based Chat Server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever start app.js",
+    "stop" : "forever stop app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
     "body-parser": "^1.19.0",
     "ecstatic": "^4.1.4",
     "express": "^4.17.1",
+    "forever": "^4.0.1",
     "http": "0.0.1-security",
     "socket-io": "^1.0.0",
     "socket.io": "^4.3.1",
