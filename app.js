@@ -55,7 +55,7 @@ app.post('/create-ns', (req, res) => {
       nsp.on('connection', function(socket)
       {
         
-        console.log('someone connected');
+        socket.broadcast.emit('join' , "some one joined");
 
         /* Orchestrate chat message */
         socket.on('chat', function(msg){
