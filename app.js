@@ -60,6 +60,7 @@ app.post('/create-ns', (req, res) => {
         /* a trigger when a client joins the chat */
         socket.on('join' , function(msg)
         { 
+            socket['data'] = msg;
             socket.broadcast.emit('join' , msg+"has joined the chat");
         })
         
@@ -82,7 +83,7 @@ app.post('/create-ns', (req, res) => {
 
         socket.on('disconnect', function(msg){
           
-          socket.broadcast.emit("join" , "user disconnected");
+          socket.broadcast.emit("join" , socket['data']+" disconnected");
         });
 
 
