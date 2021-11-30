@@ -57,7 +57,12 @@ app.post('/create-ns', (req, res) => {
         
         let headers = socket.handshake.headers;
 
-        socket.broadcast.emit('join' , "Hey some one joined :"+JSON.stringify(headers));
+        /* a trigger when a client joins the chat */
+        socket.on('join' , function(msg)
+        { 
+            socket.broadcast.emit('join' , msg+"has joined the chat");
+        })
+        
 
         /* Orchestrate chat message */
         socket.on('chat', function(msg){
