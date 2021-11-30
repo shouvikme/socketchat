@@ -54,7 +54,7 @@ app.post('/create-ns', (req, res) => {
       /* Just a cute welcome message. Dont do aww */
       nsp.on('connection', function(socket)
       {
-        const engine = socket.io.engine;
+        
 
         socket.broadcast.emit('join' , "some one joined");
 
@@ -73,10 +73,7 @@ app.post('/create-ns', (req, res) => {
           socket.broadcast.emit("data" , msg);
         });
 
-        engine.on("close", (reason) => {
-          // called when the underlying connection is closed
-          socket.broadcast.emit('join' , "some one loggedd off :"+reason);
-        });
+        
 
 
 
