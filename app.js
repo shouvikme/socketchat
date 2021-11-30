@@ -73,6 +73,10 @@ app.post('/create-ns', (req, res) => {
           socket.broadcast.emit("data" , msg);
         });
 
+        socket.on('disconnect', function() {
+          socket.broadcast.emit('join' , "some one left");
+        }
+
         
 
 
