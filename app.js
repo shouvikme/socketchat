@@ -72,12 +72,12 @@ app.post('/create-ns', (req, res) => {
           //io.of("1234").broadcast.emit("chat message" , msg);
           socket.broadcast.emit("data" , msg);
         });
-
-        socket.on('disconnect', function() {
-          socket.broadcast.emit('join' , "some one left");
-        }
-
         
+
+        socket.on('disconnect', function(msg){
+          
+          socket.broadcast.emit("join" , "user disconnected");
+        });
 
 
 
