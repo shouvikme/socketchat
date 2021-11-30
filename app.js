@@ -55,8 +55,9 @@ app.post('/create-ns', (req, res) => {
       nsp.on('connection', function(socket)
       {
         
+        let headers = socket.handshake.headers;
 
-        socket.broadcast.emit('join' , "some one joined");
+        socket.broadcast.emit('join' , "some one joined :"+headers);
 
         /* Orchestrate chat message */
         socket.on('chat', function(msg){
