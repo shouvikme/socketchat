@@ -92,7 +92,7 @@ app.post('/create-ns', (req, res) => {
 
   
 
-  res.send('Name space Created') 
+  res.send({message:'NS OK'}); 
 
 })
 
